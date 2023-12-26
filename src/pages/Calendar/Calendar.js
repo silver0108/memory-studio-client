@@ -5,6 +5,8 @@ import { Left, Right } from '../../assets';
 import axios from 'axios';
 import generateBoxNum from '../../utils/generateBoxNum';
 import { useNavigate } from 'react-router-dom';
+import BottomBar from '../../components/common/BottomBar';
+import Header from '../../components/common/Header';
 
 export default function Calendar() {
   const currentDate = new Date();
@@ -28,7 +30,7 @@ export default function Calendar() {
       try {
         const response = await axios.get(`http://3.36.63.145:8080/api/photo?month=${month}&groupId=${1}`);
         console.log(response)
-        
+
         if(response.data) {
           response.data.map(({ date, url }) => (
             setUploadedImages(prevState => ({
@@ -73,7 +75,6 @@ export default function Calendar() {
 
       // 이미지가 있는 경우 상세 페이지 이동
       if (uploadedImages[selectedDate]) {
-        console.log('이미지 있음')
         navigate(`/photo/${selectedDate}`, 
           { state: { 'year': currentYear, 'month': currentMonth, 'day': day}})
       } 
@@ -88,10 +89,6 @@ export default function Calendar() {
           console.log(file)
           
           if (file && file.type.startsWith('image/')) {
-            // const updatedImages = { ...uploadedImages };
-            // updatedImages[selectedDate] = window.URL.createObjectURL(file);
-            // setUploadedImages(updatedImages);
-
             const month = `${currentYear}-${currentMonth}`;
             const date = `${day}`
 
@@ -126,6 +123,7 @@ export default function Calendar() {
   
   return (
     <div className='calendarWrapper'>
+      <Header/>
       <div className='dateContainer'>
         <div className='yearContainer'>
           <select value={currentYear} onChange={handleYearChange}>
@@ -155,6 +153,8 @@ export default function Calendar() {
           ))}
         </div>
       ))}
+
+      <BottomBar/>
     </div>
   );
 }

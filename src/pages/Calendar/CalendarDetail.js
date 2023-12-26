@@ -1,32 +1,42 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './CalendarDetail.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function CalendarDetail() {
   const location = useLocation();
-  const pathname = location.pathname;
-  const {year, month, day} = location.state;
-  console.log(year)
+  const navigate = useNavigate();
+  const { year, month, day } = location.state;
+  const monthData = `${year}-${month}`;
+  const date = `${day}`;
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    try{
-      const response = axios.get(`/api/photodetail?
-        month=${`${year}-${month}`}}&date=${`${day}`}&groupid=${1}`);
-      const data = response.data;
-    }catch(error){
-      console.log(error)
+    const fetchData = async() => {
+      try {
+        const response = await axios
+          .get(`http://3.36.63.145:8080/api/photodetail?month=${monthData}&date=${date}&groupId=${1}`);
+        setData(response.data)
+        console.log(response.data)
+      } catch (error) {
+        console.log(error)
+      }
     }
+    fetchData();
   }, [])
 
   return (
-    <div className='calendarDetailWrapper'>
-      <div>
-
-      </div>
-      <div className='imgContainer'>
-        {/* <img src={imgUrl} alt={pathname}/> */}
-      </div>
+    <div className='detailWrapper'>
+      <button className='backButton' onClick={() => navigate(-1)}>{'<'}</button>
+      {data.map((item)=>(
+        <div key={item} className='detailContainer'>
+          <div>{item.username}</div>
+          <div className='imgContainer'>
+            <img src={item.url} alt={item.userName}/>
+          </div>
+        </div>
+      ))}
+      
     </div>
   );
 }

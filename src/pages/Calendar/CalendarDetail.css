@@ -1,4 +1,32 @@
+.detailWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #505050;
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 25px;
+  
+  border: none;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  font-weight: 700;
+  font-size: large;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #FFFFFF;
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 20px;
+}
+
 .imgContainer img{
-  width: 20vw;
+  width: 80vw;
   height: auto;
 }

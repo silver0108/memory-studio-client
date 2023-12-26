@@ -7,7 +7,9 @@ export default function CalendarBox({ number, onClick, uploadedImage }) {
       <div className='boxContainer'>
         <div>{number}</div>
         <div className='imgContainer'>
-          {uploadedImage ? <img src={uploadedImage} alt="Uploaded"/> : null}
+          {uploadedImage ? 
+            <img src={uploadedImage} alt="Uploaded" style={{width: "8vw", height: "8vw"}}/> 
+            : null}
         </div>
         
       </div>
