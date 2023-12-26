@@ -1,1 +1,15 @@
-export { ReactComponent as Alarm } from "./icon/Vector.svg";
+export { ReactComponent as Alarm } from "./icon/Alarm.svg";
+export { ReactComponent as Calendar } from "./icon/Calendar.svg";
+export { ReactComponent as Gallery } from "./icon/Gallery.svg";
+export { ReactComponent as Home } from "./icon/Home.svg";
+export { ReactComponent as Home2 } from "./icon/Home2.svg";
+export { ReactComponent as Left } from "./icon/Left.svg";
+export { ReactComponent as List } from "./icon/List.svg";
+export { ReactComponent as Notice1 } from "./icon/Notice1.svg";
+export { ReactComponent as Notice2 } from "./icon/Notice2.svg";
+export { ReactComponent as Notice3 } from "./icon/Notice3.svg";
+export { ReactComponent as Plus } from "./icon/Plus.svg";
+export { ReactComponent as Right } from "./icon/Right.svg";
+export { ReactComponent as Share } from "./icon/Share.svg";
+export { ReactComponent as Telegram } from "./icon/Telegram.svg";
+export { ReactComponent as Write } from "./icon/Write.svg";
