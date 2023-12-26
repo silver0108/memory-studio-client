@@ -12,6 +12,7 @@ export default function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth() + 1);
   const [years, setYears] = useState([]);
   const [uploadedImages, setUploadedImages] = useState({});
+  const [uploadSuccess, setUploadSuccess] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,18 +22,33 @@ export default function Calendar() {
     setYears(yearsArray);
   }, []);
 
-  // useEffect(() => {
-  //   const month = `${currentYear}-${currentMonth}`
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(`/api/photo?month=${month}&grouId=${groupId}`);
-  //       console.log(response);
-  //     } catch(error) {
-  //       console.log("미리보기 사진 불러오기 실패");
-  //     }
-  //   };
-  //   fetchData()
-  // }, [uploadedImages]);
+  useEffect(() => {
+    const month = `${currentYear}-${currentMonth}`;
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://3.36.63.145:8080/api/photo?month=${month}&groupId=${1}`);
+        console.log(response)
+        
+        if(response.data) {
+          response.data.map(({ date, url }) => (
+            setUploadedImages(prevState => ({
+              ...prevState,
+              [`${currentYear}-${currentMonth}-${date}`]: url
+            }))
+          ));
+        }
+        
+      } catch(error) {
+        console.log("미리보기 사진 불러오기 실패");
+      }
+    };
+    
+    fetchData();
+
+    if(uploadSuccess) {
+      setUploadSuccess(false);
+    }
+  }, [uploadSuccess, currentYear, currentMonth]);
 
   
 
@@ -57,8 +73,9 @@ export default function Calendar() {
 
       // 이미지가 있는 경우 상세 페이지 이동
       if (uploadedImages[selectedDate]) {
+        console.log('이미지 있음')
         navigate(`/photo/${selectedDate}`, 
-          {state: uploadedImages[selectedDate]})
+          { state: { 'year': currentYear, 'month': currentMonth, 'day': day}})
       } 
       else {
         // 이미지가 없는 경우 파일 업로드 처리
@@ -68,29 +85,33 @@ export default function Calendar() {
 
         fileInput.addEventListener('change', async (event) => {
           const file = event.target.files[0];
-          console.log(typeof window.URL.createObjectURL(file))
+          console.log(file)
           
           if (file && file.type.startsWith('image/')) {
-            const updatedImages = { ...uploadedImages };
-            updatedImages[selectedDate] = window.URL.createObjectURL(file);
-            setUploadedImages(updatedImages);
+            // const updatedImages = { ...uploadedImages };
+            // updatedImages[selectedDate] = window.URL.createObjectURL(file);
+            // setUploadedImages(updatedImages);
 
-            // const month = `${currentYear}-${currentMonth}`;
-            // const date = `${day}`
+            const month = `${currentYear}-${currentMonth}`;
+            const date = `${day}`
 
-            // const formData = {
-            //   'url': window.URL.createObjectURL(file),
-            //   'month': month,
-            //   'date': date,
-            //   'groupMemberId': 1
-            // }
+            const formData = {
+              'img': file,
+              'month': month,
+              'date': date,
+              'groupMemberId': 1
+            }
   
-            // try {
-            //   const response = await axios.post('http://3.36.63.145:8080/api/photo', formData);
-            //   console.log(response)
-            // } catch(error) {
-            //   console.log('파일 업로드 요청 실패')
-            // }
+            try {
+              const response = await axios.post('http://3.36.63.145:8080/api/photo', formData, {
+                headers: {
+                  'Content-Type': 'multipart/form-data',
+                },
+              });
+              setUploadSuccess(true)
+            } catch(error) {
+              console.log('파일 업로드 요청 실패')
+            }
           } else {
             alert('이미지 파일을 업로드 해주세요.');
           }
@@ -100,6 +121,8 @@ export default function Calendar() {
       }
     }
   };
+
+  
   
   return (
     <div className='calendarWrapper'>
