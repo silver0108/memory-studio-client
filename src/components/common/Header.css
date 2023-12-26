@@ -17,8 +17,9 @@
   align-items: center;
 
   width: 200px;
-  height: 90%;
+  height: 100%;
 
+  z-index: 1;
   background-color: #0D0D0DE6;
 }
 
