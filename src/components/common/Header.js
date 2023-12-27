@@ -31,15 +31,14 @@ export default function Header() {
   return (
     <div className="headerWrapper">
       {pathName === '/calendar' || pathName === "/letter" ? (
-        <List
-          onClick={() => setOpenSideBar(true)}
+        <List onClick={() => setOpenSideBar(true)}
         />
-      ):(
-        <>
-          <List onClick={() => setOpenSideBar(true)}/>
+      ) : (
+        <div style={{width: "85vw", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+          <List onClick={() => setOpenSideBar(true)} />
           <Home onClick={() => navigate('/')}/>
-        </>
-        
+        </div>
+
       )}
       {openSideBar ? (
         <div className='sideBar'>
@@ -56,9 +55,9 @@ export default function Header() {
               />
             ))}
           </div>
-          <RoundButton 
-            message="로그아웃" 
-            onClick={() => alert("로그아웃")} 
+          <RoundButton
+            message="로그아웃"
+            onClick={() => alert("로그아웃")}
             color="#FFFFFF"
             backgroundColor="#535353"
           />

@@ -123,7 +123,6 @@ export default function Calendar() {
   
   return (
     <div className='calendarWrapper'>
-      <Header/>
       <div className='dateContainer'>
         <div className='yearContainer'>
           <select value={currentYear} onChange={handleYearChange}>

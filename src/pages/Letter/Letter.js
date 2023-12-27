@@ -9,6 +9,7 @@ import Card from '../../components/Letter/Card'
 import "./Letter.css"
 import { Write } from '../../assets'
 import Pop from '../../components/Letter/Pop';
+import BottomBar from '../../components/common/BottomBar';
 
 function Letter() {
   const [letterList, setLetterList] = useState([]);
@@ -48,6 +49,7 @@ function Letter() {
         <div className='write_icon'>
           <Link to="/letter/write"><Write/></Link>
         </div>
+        <BottomBar/>
     </div>
   )
 }

@@ -27,7 +27,8 @@
     transform: translateY(-50%);
     border-radius: 25px;
     background: #FFFFFF;
-    z-index: 5;
+    z-index: 0;
+    display: flex;
   }
 
 /* 체크박스가 체크되면 변경 이벤트 */
@@ -48,15 +49,16 @@
   .toggletext_all {
     font-weight: bold;
     position: fixed;
-    top: 205px;
+    top: 163px;
     left: 230px;
-    z-index: 0;
+    z-index: 1;
+    text-align: center;
   }
 
   .toggletext_complete {
     font-weight: bold;
     position: fixed;
-    top: 205px;
+    top: 163px;
     left: 80px;
-    z-index: 0;
+    z-index: 1;
   }

@@ -56,7 +56,8 @@ function LetterWrite() {
         <Head/>
         <div>
             <h2 className='letter_header'>편지 작성</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}
+            style={{display: "flex", flexDirection: "column", alignItems: 'center'}}>
                 <div className='letter_to'> 
                     <Friends/>
                     <input type="text" id="letter_friend" placeholder='받는 사람' name="friendName" value={friendName} onChange={handleInputChange}/>
