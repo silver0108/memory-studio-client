@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main/Main";
+import Home from "./pages/Home/Home";
+import AddGroup from "./pages/Home/AddGroup";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Main />}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/addgroup' element={<AddGroup/>}></Route>   
       </Routes>
     </BrowserRouter>
   );
