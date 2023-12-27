@@ -64,6 +64,5 @@ export default function Header() {
           />
         </div>
       ): null}
-    </div>
   );
 }

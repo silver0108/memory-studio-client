@@ -1,0 +1,22 @@
+.letter_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+}
+
+.card_ex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_card {
+    display: flex;
+    justify-content: center;
+}
+
+.write_icon {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
