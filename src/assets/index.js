@@ -1,5 +1,6 @@
 export { ReactComponent as Alarm } from "./icon/Alarm.svg";
 export { ReactComponent as Calendar } from "./icon/Calendar.svg";
+export { ReactComponent as Friends} from "./icon/Friends.svg";
 export { ReactComponent as Gallery } from "./icon/Gallery.svg";
 export { ReactComponent as Home } from "./icon/Home.svg";
 export { ReactComponent as Home2 } from "./icon/Home2.svg";
@@ -13,3 +14,4 @@ export { ReactComponent as Right } from "./icon/Right.svg";
 export { ReactComponent as Share } from "./icon/Share.svg";
 export { ReactComponent as Telegram } from "./icon/Telegram.svg";
 export { ReactComponent as Write } from "./icon/Write.svg";
+export { ReactComponent as Friend } from "./icon/Friend.svg";

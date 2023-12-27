@@ -1,0 +1,64 @@
+.letter_switchtoggle {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.toggleSwitch {
+    width: 300px;
+    height: 50px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 16px 3px rgba(0 0 0 / 10%);
+    cursor: pointer;
+  }
+  
+   /* 토글 버튼 */
+  .toggleSwitch .toggleButton {
+    /* 버튼은 토글보다 작아야함  */
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    border-radius: 25px;
+    background: #FFFFFF;
+    z-index: 0;
+    display: flex;
+  }
+
+/* 체크박스가 체크되면 변경 이벤트 */
+#toggle:checked ~ .toggleSwitch {
+    background: #F6F6F6;
+  }
+  
+  #toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 154px);
+    background: #FFFFFF;
+  }
+  
+  .toggleSwitch, .toggleButton {
+    transition: all 0.3s ease-in;
+  }
+
+
+  .toggletext_all {
+    font-weight: bold;
+    position: fixed;
+    top: 163px;
+    left: 230px;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .toggletext_complete {
+    font-weight: bold;
+    position: fixed;
+    top: 163px;
+    left: 80px;
+    z-index: 1;
+  }

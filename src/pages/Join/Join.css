@@ -1,0 +1,91 @@
+body {
+    background-color: #F5F5F5;
+}
+.join_page {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 30px;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+p {
+    width: 250px;
+    font-weight: bold;
+}
+
+.name {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.id {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.password1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.password2 {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.email {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.box {
+    width: 220px;
+    height: 30px;
+    background-color: white;
+    font-size: 16px;
+    padding: 5px 20px 5px 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.submit_join_off {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+    left: 30%;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #464646;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.submit_join_on {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+    left: 30%;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #7B79E3;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 10px;
+}
