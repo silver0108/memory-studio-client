@@ -1,0 +1,16 @@
+.BottomBarWrapper {
+  position: fixed;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100vw;
+  height: 80px;
+
+  border-top: 1px solid #BDC5CD;
+
+  background-color: #FAFAFA;
+
+}
