@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import AddGroup from "./pages/Home/AddGroup";
 import Main from "./pages/Main/Main";
 import Calendar from "./pages/Calendar/Calendar";
 import CalendarDetail from "./pages/Calendar/CalendarDetail";
@@ -15,7 +17,8 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<Main />}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/addgroup' element={<AddGroup/>}></Route>   
         <Route path='/gallery' element={<Gallery />}></Route>
         <Route path='/calendar' element={<Calendar/>}></Route>
         <Route path='/photo/:date' element={<CalendarDetail />}></Route>
