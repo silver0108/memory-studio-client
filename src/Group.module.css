@@ -1,0 +1,155 @@
+.title{ 
+    font-size:30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #535353;
+    margin-top: 20%; 
+    margin-bottom: 20%;
+}
+.logTitle{ 
+    font-size:30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #f6f6f6;
+    margin-top: 20%; 
+    margin-bottom: 20%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 35px;
+}
+
+.btn {
+    height: 80px;
+    margin: 30px;
+    border: 3px solid rgb(112, 109, 109);
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 15px; 
+    background-color: #d1cfcf;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.groupdiv {
+
+    background-color: #a29c9c;
+    height: 30%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.addBtn {
+    height: 80px;
+    margin-left: 25%;
+    margin-top: 50%;
+    border: 3px solid rgb(112, 109, 109);
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 15px; 
+    background-color: #d1cfcf;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.inputGroup {
+    width: 300px; 
+    height: 40px; 
+    margin-left: 10%;
+    padding-left: 10px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px;
+    outline: none; 
+
+}
+.plus {
+    margin-left: 70%;
+    margin-top: 40%;
+}
+
+.logBtn {
+    display: block; 
+    width: 60%; 
+    box-sizing: border-box; 
+    padding: 15px 30px;
+    margin: 10%;
+    margin-left: 20%;
+    border-radius: 50px; 
+    background-color: #E5E5E5; 
+    color: #535353; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.btns {
+    margin-top: 80%;    
+}
+
+.bg {
+    background-image: url("./images/bg.png");
+    height: 100vh;
+    width: 100vw;
+}
+
+.friend {
+
+    display: block; 
+    width: 60%; 
+    box-sizing: border-box; 
+    padding: 15px 30px;
+    margin: 10%;
+    margin-left: 20%;
+    border-radius: 50px; 
+    background-color: #E5E5E5; 
+    color: #535353; 
+    text-align: center;
+}
+
+.addB{
+    display: block; 
+    width: 60%; 
+    box-sizing: border-box; 
+    padding: 15px 30px;
+    margin: 10%;
+    margin-left: 20%;
+    border-radius: 50px; 
+    background-color: #E5E5E5; 
+    color: #535353; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.addB:active{
+
+    background-color: #484545; 
+
+}
+
+.icon {
+
+
+}
