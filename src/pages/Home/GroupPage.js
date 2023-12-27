@@ -3,7 +3,7 @@ import styles from "../../Group.module.css";
 import { Plus } from "../../assets";
 import MainHeader from "../../components/common/MainHeader";
 import axios from "axios"
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function GroupPage() {
   const navigate = useNavigate();

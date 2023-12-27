@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Change from './pages/Home/GroupPage'
 import AddGroup from "./pages/Home/AddGroup";
 
 function App() {
