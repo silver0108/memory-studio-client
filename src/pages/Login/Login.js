@@ -47,7 +47,7 @@ function Login() {
   
         try {
           const response = await axios.post('http://3.36.63.145:8080/api/login', {
-             "id": id,
+             "userId": id,
              "password": password,
           });
 

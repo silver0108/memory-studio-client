@@ -34,10 +34,10 @@ export default function Header() {
         <List onClick={() => setOpenSideBar(true)}
         />
       ) : (
-        <div style={{width: "85vw", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+        <>
           <List onClick={() => setOpenSideBar(true)} />
           <Home onClick={() => navigate('/')}/>
-        </div>
+        </>
 
       )}
       {openSideBar ? (

@@ -20,6 +20,7 @@ export default function Gallery() {
 
   return (
     <div className='GalleryWrapper'>
+      <Header/>
       <div className='GalleryContainer'>
         <div className='text'>보관함</div>
           <div className='imgContainer'>

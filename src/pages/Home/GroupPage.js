@@ -22,7 +22,10 @@ export default function GroupPage() {
   }, []);
 
   const [checkGroup, setCheckGroup] = useState();  // 선택한 그룹 확인
-  const onClick = (event) => setCheckGroup(event.target.value);
+  const onClick = (event) => {
+    setCheckGroup(event.target.value);
+    navigate('/calendar')
+  };
 
   const [groups, setGroups] = useState([]);       // userId가 소속된 group
 

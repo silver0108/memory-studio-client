@@ -1,11 +1,12 @@
 import React , { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import Head from '../../components/Letter/Head';
 import "./LetterWrite.css"
-import { Friends } from '../../assets'
+import { Friend, Friends } from '../../assets'
 
 function LetterWrite() {
+  const navigate = useNavigate();
     const [userId, setUserId] = useState([]);
     const [friendName, setFriendName] = useState([]);
     const [content, setContent] = useState([]);
@@ -52,14 +53,17 @@ function LetterWrite() {
 };
 
   return (
+    <>
+    <button className='backButton' style={{color: "black"}}onClick={() => navigate(-1)}>{'<'}</button>
     <div className='letter_page'>
+      
         <Head/>
         <div>
             <h2 className='letter_header'>편지 작성</h2>
             <form onSubmit={handleSubmit}
             style={{display: "flex", flexDirection: "column", alignItems: 'center'}}>
                 <div className='letter_to'> 
-                    <Friends/>
+                    <Friend/>
                     <input type="text" id="letter_friend" placeholder='받는 사람' name="friendName" value={friendName} onChange={handleInputChange}/>
                 </div>
                 <div>
@@ -73,6 +77,7 @@ function LetterWrite() {
 
         
     </div>
+    </>
   )
 }
 

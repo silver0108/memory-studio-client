@@ -10,6 +10,7 @@ import "./Letter.css"
 import { Write } from '../../assets'
 import Pop from '../../components/Letter/Pop';
 import BottomBar from '../../components/common/BottomBar';
+import Header from '../../components/common/Header';
 
 function Letter() {
   const [letterList, setLetterList] = useState([]);
@@ -29,6 +30,8 @@ function Letter() {
   };
 
   return (
+    <>
+    <Header/>
     <div className='letter_page'>
         <Head/>
         <SwitchToggle/>
@@ -51,6 +54,7 @@ function Letter() {
         </div>
         <BottomBar/>
     </div>
+    </>
   )
 }
 
