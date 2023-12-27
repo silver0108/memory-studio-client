@@ -21,12 +21,12 @@ export const color = {
     1: "#000000",
     2: "#0D0D0DE6",
     3: "#0D0D0DBA",
-    4: "#444242"
+    4: "#444242",
   },
   white: {
-    1: "#FFFFFF",
-    2: "#FBFBFE",
+    "1": "#FFFFFF",
+    "2": "#FBFBFE",
   },
   red: "#DF2424",
-  purple: "#7B79E3"
-}
+  purple: "#7B79E3",
+};

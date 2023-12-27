@@ -1,8 +1,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 import { RecoilRoot } from 'recoil';
-import App from './App'; // or the root component of your application
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

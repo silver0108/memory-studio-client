@@ -1,14 +1,43 @@
-.header {
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    box-sizing:border-box;
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  margin-bottom: 0;
 }
 
-.header_link {
-    text-decoration-line: none;
-    margin: 30px;
-    color: rgb(42, 35, 35);
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 200px;
+  height: 100%;
+
+  z-index: 1;
+  background-color: #0D0D0DE6;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 10px;
+  border: none;
+  background: none;
+  color: #FFFFFF;
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+.groupList {
+  display: flex;
+  flex-direction: column;
 }
