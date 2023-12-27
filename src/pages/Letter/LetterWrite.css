@@ -1,0 +1,96 @@
+/* .letter_page {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+} */
+
+.letter_write {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #F5F5F5; */
+    margin: 0;
+}
+
+.letter_to {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#letter_friend {
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: solid 1px #E8E8E8;
+    margin-left: 20px;
+    outline: none;
+    font-size: 16px;
+    word-break:break-all;
+}
+
+#letter_name {
+    width: 290px;
+    height: 50px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: solid 1px #E8E8E8;
+    margin-top: 10px;
+    margin-left: 55px;
+    outline: none;
+    font-size: 16px;
+    word-break:break-all;
+}
+
+#letter_date {
+    width: 350px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 1px #E8E8E8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break:break-all;
+    font-family: "Pretendard-Regular" !important;
+    color: #545454;
+}
+
+#letter_text {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: solid 1px #E8E8E8;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break:break-all;
+    font-family: "Pretendard-Regular" !important;
+    color: #545454;
+}
+
+
+#letter_submit {
+    width: 250px;
+    height: 50px;
+    background-color: #010101;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: solid 1px;
+}

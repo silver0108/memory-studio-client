@@ -1,0 +1,45 @@
+.letter_card {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: #F7F6FA;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.letter_card_check {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.letter_card_name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.letter_card_date {
+    color: #C0BBBB;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.letter_card_button {
+    width: 100px;
+    height: 30px;
+    background-color: #C0BBBB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+}

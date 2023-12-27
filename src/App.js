@@ -1,11 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main/Main";
+import Header from "./components/common/Header";
+import Letter from "./pages/Letter/Letter";
+import LetterWrite from "./pages/Letter/LetterWrite";
+import Pop from "./components/Letter/Pop";
+import Join from "./pages/Join/Join";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route path='/' element={<Main />}></Route>
+        <Route path='/' element={<Main/>}></Route>
+        <Route path='/join' element={<Join/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/letter' element={<Letter/>}></Route>
+        <Route path='/letter/write' element={<LetterWrite/>}></Route>
+        <Route path='/letter/pop' element={<Pop/>}></Route>
       </Routes>
     </BrowserRouter>
   );
