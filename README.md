@@ -27,7 +27,7 @@
 ### 2. 캘린더
 <img src="https://github.com/silver0108/memory-studio-client/assets/78434676/eb372116-14cc-40bc-a21a-20c116f4ff2d" alt="캘린더" width="40%"/>
 
-### 3. 타임 캡슈 편지
+### 3. 타임 캡슐 편지
 <img src="https://github.com/silver0108/memory-studio-client/assets/78434676/13f4955e-85a0-4491-a3e0-6a4f8f391f3c" alt="타입 캡슐 편지" width="40%"/>
 
 ### 4. 편지 작성
